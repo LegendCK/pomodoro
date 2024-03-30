@@ -1,0 +1,123 @@
+/* App.css */
+@import url('https://cdn-uicons.flaticon.com/2.2.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+body {
+  color: #eee;
+  background-image: url('/src/bg.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+i{
+  text-align: center;
+  display: flex;
+  justify-items: center;
+}
+button.settings-button{
+  background: transparent;
+  font-size: xx-large;
+  border: none;
+  padding: 20px;
+  transition: .2s ease-in-out;
+}
+
+button.settings-button:hover{
+  background: transparent;
+  transform: scale(1.4) rotate(60deg);
+}
+
+main{
+  padding-top: 115px;
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.App{
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px);
+  border-radius: 20px; 
+  padding: 20px; 
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); 
+  backdrop-filter: blur(4px); 
+  -webkit-backdrop-filter: blur(4px); 
+  border: 1px solid rgba(255, 255, 255, 0.18); 
+  overflow: hidden;
+  width: 350px;
+}
+.settings-container {
+  height: 400px;
+  width: 260px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  border-radius: 25px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: azure;
+  font-size: 20px;
+}
+
+.close-button:hover {
+  transform: scale(1.65);
+  cursor: pointer;
+}
+
+.settings-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.timer-head{
+  font-size: 23px;
+  text-align: left;
+}
+
+.user-input{
+  padding-top: 20px;
+  display: flex ;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-input label {
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.user-input input{
+  text-align: center;
+  width: 50px;
+  height: 20px;
+  border-radius: 20px;
+}
+
+.settings-buttons{
+  padding-top: 20px;
+}
+
+.apply-button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 20px; /* Half of the height for a pill shape */
+  background-color: #0e76e6; /* Background color */
+  color: white; /* Text color */
+  font-family: var(--font-default); /* Use your theme font variable */
+  font-size: 14px;
+  line-height: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #1b6abf; /* Hover background color */
+}
