@@ -3,17 +3,8 @@
 import React from 'react';
 
   function ModeNavbar({mode}) {
-    const containerStyle = {
-      display: 'flex',
-      justifyContent: 'center',
-      gap: '10px',
-      background: '#34623F',
-      padding: '10px',
-      borderRadius: '30px',
-    };
-
     const buttonStyle = {
-      background: '#418250',  
+      background: '#418250',
       padding: '8px 20px',
       borderRadius: '20px',
       border: 'none',
@@ -23,16 +14,17 @@ import React from 'react';
     };
     const activeModeStyle = {
       ...buttonStyle,
-      background: '#007bff', 
+      background: '#007bff',
     };
     let activeMode;
     activeMode = (mode)
+
     return (
-      <div style={containerStyle}>
+      <nav className='navbar'>
         <div style={activeMode === 'Work' ? activeModeStyle : buttonStyle}> Work </div>
         <div style={activeMode === 'ShortBreak' ? activeModeStyle : buttonStyle}> ShortBreak </div>
         <div style={activeMode === 'LongBreak' ? activeModeStyle : buttonStyle}> LongBreak </div>
-      </div>
+      </nav>
     );
   }
 
