@@ -27,7 +27,7 @@ function App() {
   return (
     <main>
       <div className="App">
-        <h1>Pomodoro</h1>
+        <h1 className='blackText'>Pomodoro</h1>
         <Timer settings={settings} />
         <button className="settings-button" onClick={handleSettingsClick}><i class="fi fi-sr-settings"></i></button>
         {settingsVisible && <Settings settings={settings} onUpdateSettings={handleUpdateSettings} onClose={handleCloseSettings} />}

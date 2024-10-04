@@ -6,27 +6,27 @@ import ModeNavbar from './ModeNavbar';
 const Timer = ({ settings }) => {
   const [timeLeft, setTimeLeft] = useState(settings.workDuration * 60);
   const [isActive, setIsActive] = useState(false);
-  const [mode, setMode] = useState('Work'); 
+  const [mode, setMode] = useState('Work');
   const [prevMode, setPrevMode] = useState('Work');
-  const [sessionCount, setSessionCount] = useState(0); 
+  const [sessionCount, setSessionCount] = useState(0);
 
   useEffect(() => {
-    setTimeLeft(settings.workDuration * 60); 
-    setMode('Work'); 
-    setPrevMode('Work'); 
-    setSessionCount(0); 
+    setTimeLeft(settings.workDuration * 60);
+    setMode('Work');
+    setPrevMode('Work');
+    setSessionCount(0);
   }, [settings]);
 
   const getInitialTime = useCallback((mode) => {
     switch (mode) {
       case 'Work':
-        return settings.workDuration * 60; 
+        return settings.workDuration * 60;
       case 'ShortBreak':
-        return settings.shortBreakDuration * 60; 
+        return settings.shortBreakDuration * 60;
       case 'LongBreak':
         return settings.longBreakDuration * 60;
       default:
-        return 5 * 60; 
+        return 5 * 60;
     }
   }, [settings]);
 
@@ -89,7 +89,7 @@ const Timer = ({ settings }) => {
     setMode('Work');
     setPrevMode('Work');
     setSessionCount(0);
-    setTimeLeft(settings.workDuration * 60); 
+    setTimeLeft(settings.workDuration * 60);
     setIsActive(false);
   };
 
@@ -127,7 +127,7 @@ const Timer = ({ settings }) => {
           trailColor: '#eee',
         })}
       >
-        <div style={{ fontSize: 50, marginTop: -5 }}>
+        <div className='blackText' style={{ fontSize: 50, marginTop: -5 }}>
           <strong>{`${minutes}:${seconds < 10 ? '0' : ''}${seconds}`}</strong>
         </div>
         <div style={buttonContainerStyle}>
@@ -137,7 +137,7 @@ const Timer = ({ settings }) => {
         </div>
       </CircularProgressbarWithChildren>
       <br></br>
-      <div style={{ fontSize: 20, fontWeight: 'bold'}}>Session : {sessionCount}</div >
+      <div className='blackText' style={{ fontSize: 20, fontWeight: 'bold' }}>Session : {sessionCount}</div >
     </div>
   );
 };
